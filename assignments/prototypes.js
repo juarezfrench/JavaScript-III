@@ -8,30 +8,64 @@
   Each constructor function has unique properties and methods that are defined in their block comments below:
 */
   
-/*
-  === GameObject ===
-  * createdAt
-  * name
-  * dimensions (These represent the character's size in the video game)
-  * destroy() // prototype method that returns: `${this.name} was removed from the game.`
-*/
 
-/*
-  === CharacterStats ===
-  * healthPoints
-  * takeDamage() // prototype method -> returns the string '<object name> took damage.'
-  * should inherit destroy() from GameObject's prototype
-*/
+//  === GameObject ===
 
-/*
-  === Humanoid (Having an appearance or character resembling that of a human.) ===
+function GameObject() {
+this.createdAt = createdAt,  
+this.name = "name",
+this.dimensions = dimensions(),
+this.destroy = function destroy() {
+  return `${this.name} was removed from the game.`;
+    }
+  }
+
+
+
+  // * createdAt
+  // * name
+  // * dimensions (These represent the character's size in the video game)
+  // * 
+  // //=== CharacterStats ===
+  
+  function CharacterStats() {
+    this.healthPoints = healthPoints;
+    this.takeDamage = function takedamage() {
+        return `${objectName} took damage.`
+    this.destroy = function destroy() {
+          return `${this.name} was removed from the game.`;
+            }
+    }
+
+
+  }  
+  
+  // * healthPoints
+  // * takeDamage() // prototype method -> returns the string '<object name> took damage.'
+  // * should inherit destroy() from GameObject's prototype
+
+  //=== Humanoid (Having an appearance or character resembling that of a human.) ===
+  
+  function Humanoid() {
+    this.team = "team",
+    this.weapons = "weapons",
+    this.language = "language",
+    this.greet = function greet(){
+      return `<${ObjectName} offers a greeting in ${ObjectLanguage}.`,
+    this.destroy = destroy() {return `${this.name} was removed from the game.`;
+                     }
+         
+
+
+    }
+  
+  
   * team
   * weapons
   * language
   * greet() // prototype method -> returns the string '<object name> offers a greeting in <object language>.'
   * should inherit destroy() from GameObject through CharacterStats
   * should inherit takeDamage() from CharacterStats
-*/
  
 /*
   * Inheritance chain: GameObject -> CharacterStats -> Humanoid
